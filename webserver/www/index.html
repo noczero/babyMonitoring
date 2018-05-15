@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Baby Monitoring</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body onload="update()">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Dashboard</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">Home</a></li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="container text-center">
+	<div class="page-header">
+	  <h1>Baby Monitoring & Controlling <small>by Group 10</small></h1>
+	</div>
+	<div>
+		<h4>
+			
+		Status : 
+		<span id="stats" class="label label-default">Normal</span>
+		</h4>
+	</div>
+		<div>
+			<h4>Turn Lamp :  <small id="onoroff-1"></small>
+			<button class="btn btn-primary" onclick="startLED_1()">ON</button>
+			<button class="btn btn-warning" onclick="stopLED_1()">OFF</button>
+			</h4>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				Grafik Realtime Suara
+			
+			<div id="grafikSuara" style="width: 100%; height:300px;"> </div>
+			</div>
+			<div class="col-md-6">
+				Grafik Realtime Getaran
+			<div id="grafikGetar" style="width: 100%; height:300px;"> </div>
+					
+			</div>
+		</div>
+		<div>
+			<h2>Incoming Message</h2>
+			<div id="receiveData-1"></div>
+			<div id="receiveData-2"></div>
+			<div id="receiveData-3"></div>
+			<div id="receiveData-4"></div>
+		</div>
+	</div>
+
+</body>
+<script src="js/jquery-3.3.1.min.js"></script> <!-- Import socket io -->
+<script src="js/bootstrap.js"></script> <!-- Import socket io -->
+<script src="js/bootstrap.js"></script> <!-- Import socket io -->
+<script src="/socket.io/socket.io.js"></script> <!-- Import socket io -->
+
+  <!-- flot js -->
+  <!--[if lte IE 8]><script type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+  <script type="text/javascript" src="js/flot/jquery.flot.js"></script>
+  <script type="text/javascript" src="js/flot/jquery.flot.pie.js"></script>
+  <script type="text/javascript" src="js/flot/jquery.flot.orderBars.js"></script>
+  <script type="text/javascript" src="js/flot/jquery.flot.time.min.js"></script>
+  <script type="text/javascript" src="js/flot/date.js"></script>
+  <script type="text/javascript" src="js/flot/jquery.flot.spline.js"></script>
+  <script type="text/javascript" src="js/flot/jquery.flot.stack.js"></script>
+  <script type="text/javascript" src="js/flot/curvedLines.js"></script>
+  <script type="text/javascript" src="js/flot/jquery.flot.resize.js"></script>
+
+<script src="app/data.js"></script> <!-- import data js -->
+<script type="text/javascript">
+	
+</script>
+
+</html>
